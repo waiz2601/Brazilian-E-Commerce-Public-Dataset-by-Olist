@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+plotly
+geopandas
+geobr
+mapsmx
+nltk
+googletrans==4.0.0-rc1
+wordcloud
+scikit-learn
+torch
+torchvision
+xgboost
+Pillow
