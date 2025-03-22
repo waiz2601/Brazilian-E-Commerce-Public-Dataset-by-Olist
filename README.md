@@ -15,7 +15,7 @@ The dataset contains transactions from **Olist**, a Brazilian e-commerce platfor
 | **Model Building** | Scripts | 🔄 In Progress |  
 | **Model Comparison** | Model comparisons and detailed analysis | ⏳ Pending |  
 | **Deployment** | Flask API with basic UI | ⏳ Pending |  
-| **Final Presentation** | PPT, repo with all documentation | ⏳ Pending |  
+ 
 
 ### Progress  
 - ✅ Completed **Data Analysis**  
