@@ -1,0 +1,188 @@
+{
+    "timestamp": "2025-03-26 15:46:26",
+    "model_performance": {
+        "Random Forest": {
+            "accuracy": 0.7739430543572045,
+            "average_precision": 0.9570296969808488
+        },
+        "XGBoost": {
+            "accuracy": 0.8080241587575496,
+            "average_precision": 0.9623199215079021
+        },
+        "Gradient Boosting": {
+            "accuracy": 0.8075927523727351,
+            "average_precision": 0.9626892917033438
+        }
+    },
+    "feature_importance": [
+        {
+            "feature": "purchase_month",
+            "importance": 0.13677756488323212
+        },
+        {
+            "feature": "estimated_delivery_time",
+            "importance": 0.10784537345170975
+        },
+        {
+            "feature": "purchase_day",
+            "importance": 0.06570468842983246
+        },
+        {
+            "feature": "freight_value",
+            "importance": 0.06359837204217911
+        },
+        {
+            "feature": "weight_to_price_ratio",
+            "importance": 0.05283850431442261
+        },
+        {
+            "feature": "product_width_cm",
+            "importance": 0.05183188617229462
+        },
+        {
+            "feature": "price_per_weight",
+            "importance": 0.04833061993122101
+        },
+        {
+            "feature": "price_volume_interaction",
+            "importance": 0.0465434193611145
+        },
+        {
+            "feature": "price",
+            "importance": 0.044847648590803146
+        },
+        {
+            "feature": "processing_time",
+            "importance": 0.044138092547655106
+        },
+        {
+            "feature": "product_volume",
+            "importance": 0.04412400349974632
+        },
+        {
+            "feature": "product_height_cm",
+            "importance": 0.04316049814224243
+        },
+        {
+            "feature": "price_per_volume",
+            "importance": 0.0427037738263607
+        },
+        {
+            "feature": "volume_to_weight_ratio",
+            "importance": 0.04227084666490555
+        },
+        {
+            "feature": "shipping_cost_ratio",
+            "importance": 0.04201380908489227
+        },
+        {
+            "feature": "price_weight_interaction",
+            "importance": 0.041950155049562454
+        },
+        {
+            "feature": "weight_volume_interaction",
+            "importance": 0.041301049292087555
+        },
+        {
+            "feature": "product_density",
+            "importance": 0.04001963511109352
+        }
+    ],
+    "data_statistics": {
+        "total_samples": 11586,
+        "class_distribution": {
+            "1": 10675,
+            "0": 911
+        },
+        "missing_values": {
+            "order_id": 0,
+            "customer_id": 0,
+            "order_status": 0,
+            "order_purchase_timestamp": 0,
+            "order_approved_at": 0,
+            "order_delivered_carrier_date": 0,
+            "order_delivered_customer_date": 0,
+            "order_estimated_delivery_date": 0,
+            "review_id": 0,
+            "review_score": 0,
+            "review_comment_title": 0,
+            "review_comment_message": 0,
+            "review_creation_date": 0,
+            "review_answer_timestamp": 0,
+            "payment_sequential": 0,
+            "payment_type": 0,
+            "payment_installments": 0,
+            "payment_value": 0,
+            "customer_unique_id": 0,
+            "customer_zip_code_prefix": 0,
+            "customer_city": 0,
+            "customer_state": 0,
+            "order_item_id": 0,
+            "product_id": 0,
+            "seller_id": 0,
+            "shipping_limit_date": 0,
+            "price": 0,
+            "freight_value": 0,
+            "product_category_name": 0,
+            "product_name_length": 0,
+            "product_description_length": 0,
+            "product_photos_qty": 0,
+            "product_weight_g": 0,
+            "product_length_cm": 0,
+            "product_height_cm": 0,
+            "product_width_cm": 0,
+            "seller_zip_code_prefix": 0,
+            "seller_city": 0,
+            "seller_state": 0,
+            "purchase_year": 0,
+            "purchase_month": 0,
+            "purchase_day": 0,
+            "purchase_weekday": 0,
+            "purchase_hour": 0,
+            "purchase_quarter": 0,
+            "is_weekend": 0,
+            "is_holiday": 0,
+            "is_peak_hour": 0,
+            "is_morning": 0,
+            "is_afternoon": 0,
+            "is_evening": 0,
+            "product_volume": 0,
+            "price_per_volume": 0,
+            "price_per_weight": 0,
+            "product_density": 0,
+            "is_large_item": 0,
+            "is_heavy_item": 0,
+            "is_expensive": 0,
+            "processing_time": 0,
+            "estimated_delivery_time": 0,
+            "shipping_cost_ratio": 0,
+            "weight_to_price_ratio": 0,
+            "volume_to_weight_ratio": 0,
+            "delivery_delay": 0,
+            "on_time_delivery": 0,
+            "price_weight_interaction": 0,
+            "price_volume_interaction": 0,
+            "weight_volume_interaction": 0
+        }
+    },
+    "experimentation_details": {
+        "preprocessing_steps": [
+            "Missing value handling using median for numeric columns",
+            "Outlier detection and handling using z-score method",
+            "Feature scaling using RobustScaler",
+            "Class imbalance handling using conservative undersampling",
+            "Feature selection using Random Forest"
+        ],
+        "feature_engineering": [
+            "Time-based features (month, day, weekday, hour)",
+            "Product physical characteristics",
+            "Derived features (volume, density, ratios)",
+            "Interaction features"
+        ],
+        "model_configurations": {
+            "Random Forest": "{'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': 'balanced', 'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 10, 'min_samples_split': 20, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 500, 'n_jobs': None, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}",
+            "XGBoost": "{'objective': 'binary:logistic', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': None, 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.01, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 6, 'max_leaves': None, 'min_child_weight': 3, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 500, 'n_jobs': None, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': None, 'validate_parameters': None, 'verbosity': None}",
+            "Gradient Boosting": "{'ccp_alpha': 0.0, 'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.01, 'loss': 'log_loss', 'max_depth': 6, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 10, 'min_samples_split': 20, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 500, 'n_iter_no_change': None, 'random_state': 42, 'subsample': 0.8, 'tol': 0.0001, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}"
+        }
+    }
+}
